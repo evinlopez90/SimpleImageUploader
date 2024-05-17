@@ -9,8 +9,9 @@ import Shard from "./Shard";
 import { motion } from "framer-motion";
 
 const Uploader = () => {
-  const cloud_name = import.meta.env.REACT_CLOUD_NAME; // Nombre de la cuenta en Cloudinary
-  const precet = import.meta.env.REACT_API_SECRET
+  const cloud_name = import.meta.env.VITE_CLOUD_NAME; // Nombre de la cuenta en Cloudinary
+  const precet = import.meta.env.VITE_API_SECRET
+
 
   // Estados locales
   const [isDragging, SetIsDragging] = useState<boolean>(false); // Estado para el arrastre
@@ -72,7 +73,7 @@ const Uploader = () => {
       setLoader(true);
       setTimeout(() => {
         setLoader(false);
-        console.log(loader);
+       
       }, 3000);
     }
   };
